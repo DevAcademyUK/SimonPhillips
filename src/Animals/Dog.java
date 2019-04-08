@@ -1,12 +1,12 @@
 package Animals;
 
-public class dog {
+public class Dog {
     private String name;
     private String size;
     private int age;
     private String breed;
 
-    public dog(String name, String size, int age, String breed) {
+    public Dog(String name, String size, int age, String breed) {
         this.name = name;
         this.size = size;
         this.age = age;
@@ -14,7 +14,7 @@ public class dog {
     }
 
     public String bark (String size){
-        String bark = "";
+        String bark;
         if(size.equalsIgnoreCase( "small")){
             bark = "yap yap yap";
         }

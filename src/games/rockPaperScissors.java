@@ -8,7 +8,7 @@ public class rockPaperScissors {
     String playerName;
     String playerMove;
     String computerMove;
-    //declarinhg empty string variables
+    //declaring empty string variables
     int score;
     //declaring empty int variable
     Scanner myScanner = new Scanner(System.in);

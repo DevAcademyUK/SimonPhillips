@@ -33,7 +33,7 @@ public class createAnimal {
         int age = Integer.parseInt(myScanner.nextLine());
         System.out.println("What breed is the dog?");
         String breed = myScanner.nextLine();
-        dog myDog = new dog(name, size, age, breed);
+        Dog myDog = new Dog(name, size, age, breed);
 
         System.out.println(myDog.bark(size));
         System.out.println(myDog.play(breed));
