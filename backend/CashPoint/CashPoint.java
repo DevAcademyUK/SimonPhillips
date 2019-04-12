@@ -105,10 +105,10 @@ public class CashPoint {
             cAccountBalance += depositAmount;
         }
         else if(account.equalsIgnoreCase("Joint")){
-            jAccountBalance += depsoitAmount;
+            jAccountBalance += depositAmount;
         }
         else if(account.equalsIgnoreCase("Savings")){
-            sAccountBalance += depsoitAmount;
+            sAccountBalance += depositAmount;
         }
         else {
             System.out.println("Invalid account option provided");
