@@ -31,12 +31,11 @@ public class makeRoast {
         System.out.println("So, you want to view the ingredient eh? password first!");
         String password = myScanner.nextLine();
         ArrayList<Ingredient> ingredients = roast.getIngredients(password);
-        if(ingredients != null) {
-            for(Ingredient i : ingredients) {
+        if (ingredients != null) {
+            for (Ingredient i : ingredients) {
                 System.out.println("Ingredient: " + i.ingredientName + ", Amount: " + i.ingredientQuantity);
             }
-        }
-        else
+        } else
             System.out.println("Caught you!");
     }
 }

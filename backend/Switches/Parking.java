@@ -25,7 +25,7 @@ public class Parking {
         int hourlyrate = 0;
         int multiplier = 0;
 
-        switch(position) {
+        switch (position) {
             case "Staff":
                 multiplier = 2;
                 break;
@@ -42,7 +42,7 @@ public class Parking {
                 getInput();
         }
 
-        switch(day) {
+        switch (day) {
             case "Monday":
                 hourlyrate = 2;
                 break;

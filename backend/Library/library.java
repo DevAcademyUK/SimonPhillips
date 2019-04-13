@@ -1,4 +1,5 @@
 package backend.Library;
+
 import java.util.Scanner;
 
 public class library {
@@ -84,11 +85,11 @@ public class library {
         System.out.println("What book would you like to check?");
         String book = myScanner.nextLine();
 
-        if (book.equalsIgnoreCase("In Search of Lost Time"){
+        if (book.equalsIgnoreCase("In Search of Lost Time") {
             System.out.println("We currently have 2 copies of " + books[0]);
         } else if (book.equalsIgnoreCase("Ulysses")) {
             System.out.println("We currently have 4 copies of " + books[1]);
-        } else if (book.equalsIgnoreCase( "Moby Dick")) {
+        } else if (book.equalsIgnoreCase("Moby Dick")) {
             System.out.println("We currently have 1 copies of " + books[2]);
         } else if (book.equalsIgnoreCase("Pride and Prejudice")) {
             System.out.println("We currently have 3 copies of " + books[3]);

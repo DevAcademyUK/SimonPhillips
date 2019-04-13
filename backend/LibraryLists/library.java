@@ -66,14 +66,14 @@ public class library {
     }
 
     private void searchBook() {
-        for(book a : books) {
+        for (book a : books) {
             System.out.println(a.bookTitle);
         }
 
         System.out.println("\n");
         Collections.sort(books);
 
-        for(book b : books) {
+        for (book b : books) {
             System.out.println(b.bookTitle);
         }
 
@@ -88,7 +88,7 @@ public class library {
     private void searchAuthor() {
         Collections.sort(books, book.bookAuthorComparator);
 
-        for(book b : books) {
+        for (book b : books) {
             System.out.println(b.bookAuthor);
         }
         System.out.println("\n");

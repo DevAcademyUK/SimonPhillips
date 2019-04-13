@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class createAnimal {
     Scanner myScanner = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         createAnimal create = new createAnimal();
         create.getAnimalType();
     }
@@ -15,9 +15,9 @@ public class createAnimal {
     private void getAnimalType() {
         System.out.println("What animal would you like to create?");
         String animal = myScanner.nextLine();
-        if(animal.equalsIgnoreCase("dog")){
+        if (animal.equalsIgnoreCase("dog")) {
             createDog();
-        } else if(animal.equalsIgnoreCase("cat")){
+        } else if (animal.equalsIgnoreCase("cat")) {
             createCat();
         } else {
             System.out.println(animal + " is not an animal we can currently create, please try again");

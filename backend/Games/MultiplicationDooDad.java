@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MultiplicationDooDad {
     Scanner myScanner = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MultiplicationDooDad mdd = new MultiplicationDooDad();
         mdd.getValues();
     }
@@ -19,7 +19,7 @@ public class MultiplicationDooDad {
     }
 
     private void calculate(int number, int multiplier) {
-        for(int i = 1; i <= multiplier; i++) {
+        for (int i = 1; i <= multiplier; i++) {
             System.out.println(i + " times" + number + " is " + i * number);
         }
     }

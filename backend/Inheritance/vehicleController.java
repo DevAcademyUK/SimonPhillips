@@ -22,7 +22,7 @@ public class vehicleController {
         System.out.println("6 - Bicycle");
         int input = Integer.parseInt(myScanner.nextLine());
 
-        switch(input) {
+        switch (input) {
             case 1:
                 createCar();
                 break;
@@ -52,7 +52,7 @@ public class vehicleController {
     }
 
     private void createCar() {
-        car c = new car((short)5, (short)4);
+        car c = new car((short) 5, (short) 4);
         c.carManufacturer();
         c.license_number();
         c.steer("Right");
@@ -62,7 +62,7 @@ public class vehicleController {
     }
 
     private void createBus() {
-        bus b = new bus((short)5, (short)4);
+        bus b = new bus((short) 5, (short) 4);
         b.busManufacturer();
         b.steer("Left");
         b.accelerate();
@@ -71,7 +71,7 @@ public class vehicleController {
     }
 
     private void createTruck() {
-        truck a = new truck((short)5, (short)4);
+        truck a = new truck((short) 5, (short) 4);
         a.truckManufacturer();
         a.steer("Left");
         a.accelerate();
@@ -80,7 +80,7 @@ public class vehicleController {
     }
 
     private void createTrain() {
-        train t = new train((short)5, (short)4);
+        train t = new train((short) 5, (short) 4);
         t.steer("");
         t.accelerate();
         t.brake();
@@ -88,7 +88,7 @@ public class vehicleController {
     }
 
     private void createMotorbike() {
-        motorbike m = new motorbike((short)5, (short)4);
+        motorbike m = new motorbike((short) 5, (short) 4);
         m.motorbikeManufacturer();
         m.steer("Left");
         m.accelerate();
@@ -97,7 +97,7 @@ public class vehicleController {
     }
 
     private void createBicycle() {
-        bicycle b = new bicycle((short)5, (short)4);
+        bicycle b = new bicycle((short) 5, (short) 4);
         b.bicycleManufacturer();
         b.steer("Right");
         b.accelerate();

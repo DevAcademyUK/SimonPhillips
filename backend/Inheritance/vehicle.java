@@ -18,12 +18,11 @@ public class vehicle {
         System.out.println("How fast do you want to go?");
         int speed = Integer.parseInt(myScanner.nextLine());
         //Build a method for changeGear that uses an if statement to check speed
-        if(currentGear == 1){
-            if(speed <= 20 && currentSpeed < speed){
+        if (currentGear == 1) {
+            if (speed <= 20 && currentSpeed < speed) {
                 currentSpeed = 20;
                 System.out.println("You are now going " + currentSpeed + " mph");
-            }
-            else {
+            } else {
                 System.out.println("You are already travelling faster than this!");
             }
         }

@@ -8,7 +8,7 @@ public class member implements Comparable<member> {
     public String memberSurname;
     public byte memberAge;
 
-    public member(int ID, String forename, String surname, byte age){
+    public member(int ID, String forename, String surname, byte age) {
         memberID = ID;
         this.memberForename = forename;
         this.memberSurname = surname;
@@ -27,7 +27,7 @@ public class member implements Comparable<member> {
 
     public static Comparator<member> memberSnameComparator = new Comparator<member>() {
         @Override
-        public int compare(member m1,member m2) {
+        public int compare(member m1, member m2) {
             String sname1 = m1.memberSurname.toUpperCase();
             String sname2 = m2.memberSurname.toUpperCase();
 

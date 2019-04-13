@@ -13,15 +13,13 @@ public class Dog {
         this.breed = breed;
     }
 
-    public String bark (String size){
+    public String bark(String size) {
         String bark;
-        if(size.equalsIgnoreCase( "small")){
+        if (size.equalsIgnoreCase("small")) {
             bark = "yap yap yap";
-        }
-        else if(size.equalsIgnoreCase( "medium")){
+        } else if (size.equalsIgnoreCase("medium")) {
             bark = "woof woof";
-        }
-        else {
+        } else {
             bark = "WOOF WOOF!";
         }
         return bark;
@@ -29,13 +27,11 @@ public class Dog {
 
     public String play(String breed) {
         String playing = "";
-        if(breed.equalsIgnoreCase( "poodle")){
+        if (breed.equalsIgnoreCase("poodle")) {
             playing = "Oh Dear, I don't think so, one could not possibly engage in such activities";
-        }
-        else if(breed.equalsIgnoreCase( "Labrador")) {
+        } else if (breed.equalsIgnoreCase("Labrador")) {
             playing = "Yeah, Yeah, Throw the stick! Yeah, DO IT!";
-        }
-        else if(breed.equalsIgnoreCase( "Border Collie")) {
+        } else if (breed.equalsIgnoreCase("Border Collie")) {
             playing = "Lets go chase us some sheep!";
         }
         return playing;

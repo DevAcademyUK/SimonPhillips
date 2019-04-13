@@ -1,8 +1,9 @@
 package Songs;
+
 import java.util.Scanner;
 
 public class singSong {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         singSong singing = new singSong();
         singing.sing();
     }
@@ -13,17 +14,16 @@ public class singSong {
         int bottles = myScanner.nextInt();
 
         String word = "bottles";
-        for(int i = bottles; i > 0; i--){
+        for (int i = bottles; i > 0; i--) {
             System.out.println(i + " " + word + " of beer on the wall");
             System.out.println(i + " " + word + " of beer");
             System.out.println("Take one down");
             System.out.println("Pass it around");
-            if(i == 1){
+            if (i == 1) {
                 System.out.println("No more bottles of beer on the wall.");
-            }
-            else {
+            } else {
                 int newNum = i - 1;
-                if(newNum == 1){
+                if (newNum == 1) {
                     word = "bottle";
                 }
                 System.out.println(newNum + " " + word + " of beer on the wall.");

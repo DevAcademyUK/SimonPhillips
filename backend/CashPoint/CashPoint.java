@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CashPoint {
     Scanner myScanner = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         CashPoint open = new CashPoint();
         open.initialScreen();
     }
@@ -15,16 +15,13 @@ public class CashPoint {
         int account = Integer.parseInt(myScanner.nextLine());
         System.out.println("What is your pin number?");
         int pin = Integer.parseInt(myScanner.nextLine());
-        if(account == 1234 && pin == 1223){
+        if (account == 1234 && pin == 1223) {
             currAccount();
-        }
-        else if(account == 2345 && pin == 2334){
+        } else if (account == 2345 && pin == 2334) {
             jointAccount();
-        }
-        else if(account == 3456 && pin == 3344){
+        } else if (account == 3456 && pin == 3344) {
             savingsAccount();
-        }
-        else {
+        } else {
             System.out.println("This is not the correct account number/pin number combination");
         }
     }
@@ -65,33 +62,30 @@ public class CashPoint {
     private void transferFunds() {
         System.out.println("What account do you want to transfer from?\n (Options: Current Account, Joint Account, Savings Account)");
         String input = myScanner.nextLine();
-        if(input.equalsIgnoreCase("Current")){
+        if (input.equalsIgnoreCase("Current")) {
             System.out.println("Which account would you like to transfer too?");
             String sourceAcc = myScanner.nextLine();
             System.out.println("How much would you like to transfer?");
             String transferAmt = myScanner.nextLine():
-            if(sourceAcc.equalsIgnoreCase("Current")){
+            if (sourceAcc.equalsIgnoreCase("Current")) {
 
             }
-        }
-        else if(input.equalsIgnoreCase("Joint")){
+        } else if (input.equalsIgnoreCase("Joint")) {
             System.out.println("How much would you like to transfer?");
-        }
-        else if(input.equalsIgnoreCase("Savings")){
+        } else if (input.equalsIgnoreCase("Savings")) {
             System.out.println("How much would you like to transfer?");
         }
         String transfer = myScanner.nextLine();
 
         double amount = Double.parseDouble(myScanner.nextLine());
-        if(transfer.equalsIgnoreCase("Joint Account")) {
-            if(srcAcc.equalsIgnoreCase("savings")){
+        if (transfer.equalsIgnoreCase("Joint Account")) {
+            if (srcAcc.equalsIgnoreCase("savings")) {
 
             }
         }
-            if(transfer.equalsIgnoreCase("Current")){
+        if (transfer.equalsIgnoreCase("Current")) {
             //Transfer money from current account to Joint account
-            }
-         else if(transfer.equalsIgnoreCase("Savings Account")){
+        } else if (transfer.equalsIgnoreCase("Savings Account")) {
             //Transfer money from curr account to savings account
         }
     }
@@ -101,23 +95,20 @@ public class CashPoint {
         String account = myScanner.nextLine();
         System.out.println("How much would you like to deposit?");
         short depositAmount = Short.parseShort(myScanner.nextLine());
-        if(account.equalsIgnoreCase("Current")){
+        if (account.equalsIgnoreCase("Current")) {
             cAccountBalance += depositAmount;
-        }
-        else if(account.equalsIgnoreCase("Joint")){
+        } else if (account.equalsIgnoreCase("Joint")) {
             jAccountBalance += depositAmount;
-        }
-        else if(account.equalsIgnoreCase("Savings")){
+        } else if (account.equalsIgnoreCase("Savings")) {
             sAccountBalance += depositAmount;
-        }
-        else {
+        } else {
             System.out.println("Invalid account option provided");
         }
     }
 
     private void withdraw() {
         System.out.println("Which account would you like to make a withdrawal from?");
-        String account =  myScanner.nextLine();
+        String account = myScanner.nextLine();
         System.out.println("How much would you like to withdraw?");
         short withDrawAmount = Short.parseShort(myScanner.nextLine());
     }
@@ -130,16 +121,13 @@ public class CashPoint {
     private void action() {
         System.out.println("What do you want to do next?\n (Options: Transfer funds, Deposit, Withdraw, Log Out)");
         String input = myScanner.nextLine();
-        if(input.equalsIgnoreCase("Transfer funds")){
+        if (input.equalsIgnoreCase("Transfer funds")) {
             transferFunds();
-        }
-        else if(input.equalsIgnoreCase("Deposit")){
+        } else if (input.equalsIgnoreCase("Deposit")) {
             deposit();
-        }
-        else if(input.equalsIgnoreCase("Withdraw")){
+        } else if (input.equalsIgnoreCase("Withdraw")) {
             withdraw();
-        }
-        else if(input.equalsIgnoreCase("logout")){
+        } else if (input.equalsIgnoreCase("logout")) {
             logOut();
         }
     }

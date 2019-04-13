@@ -9,7 +9,7 @@ public class book implements Comparable<book> {
     public String bookAuthor;
     public String bookYear;
 
-    public book(int ID, String title, String author, String year){
+    public book(int ID, String title, String author, String year) {
         bookID = ID;
         bookTitle = title;
         bookAuthor = author;
