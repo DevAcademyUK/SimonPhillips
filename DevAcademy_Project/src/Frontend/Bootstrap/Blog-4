@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+
+    <style media="screen">
+      body {
+        color: white;
+      }
+
+      img {
+        border-radius: 10px 10px 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-dark">
+      <div class="">
+        <img src="./img/java.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="jumbotron bg-dark">
+        <h1 class="display-4">Java</h1>
+        <p class="lead">This is the result of the CSS quiz I took.</p>
+        <hr class="my-4">
+        <p>Things I want to look nto further include:</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+      <div class="bg-dark">
+        <h2>Variable types</h2>
+        <p>An object can grow dynamically based on your available memory. To do so, you have different types of variables. Reference, static, instance and local variables. You also have method parameters. Immutable variables/objects cannot be changed and you have to define the type of variable you require in Java.</p>
+        <ul>
+          <li>Instance variables are created and availble within the body of the class</li>
+          <li>Global variables are variables created in a seperate class. Global variables are static.</li>
+          <li>The static keyword denotes that a member variable, or method, can be accessed to which it belongs. In somple terms, pit means that you can call a method, even if you've never created the object to which it belongs.</li>
+        </ul>
+        <h2>Variable types</h2>
+        <ul>
+          <li>int - Number long and short</li>
+          <li>double - Floating point numbers 3.14</li>
+          <li>boolean - true/false</li>
+          <li>char - characters 'A' + Unicide reference</li>
+          <li>String - sequence of characters</li>
+        </ul>
+        <h2></h2>
+        <p>Programmers code using "Blueprints" of data models called classes.</p>
+        <ul>
+          <li>Everything in OOP is grouped as self sustainable "objects". Hence, you gain re-usability by means of four main object-oriented programming concepts.</li>
+          <li>In OOP programmers define not only the data type of a data structure, but also the types of operations/methods (functions) that can be applied to the data structure.</li>
+          <li>In this way, the data structure becomes an object that includes both data and functions (methods) in one unit. In addition, programmers can create relationships between one object and another.</li>
+        </ul>
+        <p>For example, objects can inherit characteristics from other objects.</p>
+        <p>"The real world can be accurately described as a collection of objects that interact."</p>
+        <p>Object - Usually a person, place or thing.</p>
+        <p>Method - An action performed by an object</p>
+        <p>Property or attribute - Characteristics of a certain object.</p>
+        <p>Class - A category of similar objects (such as cars), does not hold any values of the objects attributes/properties.</p>
+        <ul>
+          <li>A class is a prototype, idea, and blueprint for creating objects</li>
+          <li>An object is an instance of a class</li>
+          <li>For example, in JAva we define classes, which in turn are used to create objects</li>
+          <li>A class has a constructor for creating objects</li>
+          <li>Class is composed of three things: its name, attributes/properties, and methods</li>
+        </ul>
+        <h2>In short</h2>
+        <p>Animal is a class, "Snowball" the cat is an object</p>
+        <p>Vehicle is a class, My neighbour's BMW is an object</p>
+
+        <p>In order to manage the classes of a software system, and to reduce the complexity, system designers use several techniques, which can be grouped under four main concepts named:</p>
+        <ol>
+          <li>Encapsulation</li>
+          <li>Abstaction</li>
+          <li>Inheritance</li>
+          <li>Polymorphism</li>
+        </ol>
+
+        <h2>Encapsulation</h2>
+        <ol>
+          <li>The encapsulation is the inclusion-within a program object of all the resources needed for the object to function, basically, the methods and the data</li>
+          <li>In OOP the encapsualtion is mainly acheived by creating classes, the classes expose public methods and properties.</li>
+          <li>A class is kind of a container or capsule or a cell, which encapsulate a set of methods, attribute and properties to provide its indented functionalities to other classes. In that sense, encapsulation also allows a class to change its internal implementation without hurting the overall functioning of the system.</li>
+          <li>That idea of encapsulation is to hide how a class does its business, while allowing other classes to make requests of it.</li>
+        </ol>
+        <h2>Abstraction</h2>
+        <ol>
+          <li>Abstraction is an emphasis on the idea, qualities and properties rather than the particulars (a suppresion of detail). The importnace of abstraction is derived from its ability to hide irrelevant details and from the use of names to reference objects.</li>
+          <li>Abstraction is essential in the construction of programs. It places the emphasis on what an object is or does rather than how it works. Thus, it is the primary means of managing complexity inlarge programs.</li>
+          <li>While abstraction reduces complexity by hiding irrelevant data.</li>
+        </ol>
+        <h2>What is an abstract class?</h2>
+        <p>Abstract classes, which declared with the abstract keyword, cannot be instantiated. It can only be used as a super-class for other classes that extend the abstract class. Abstract class is the concept and implementation getd completed when it is being realised by a subclass. In addition to this a class can inherit only from on abstract class (but a class may implement many interfaces) and must override all its methods/properties that are declared to be abstract and may override virtual methods/properties. Abtract classes are ideal when implementing frameworks</p>
+        <h2>What is an interface?</h2>
+        <p>Interface can be used to define a generic template and then one or more abstract classes to define partial implementations of the interface. Interfaces just specify the method declaration (implicitly public and abstract) and can contain properties (which are also implicitly public and abstract). Interface definition begins with the keyword interface. An interface like that of an abstract class cannot be instantiated. If a class that implements an interface does not define all the methods of the interface, then it must be provided by the subclass that extends the abstract class. In addition to this an interface can inherit other interfaces.</p>
+        <h2>What is polymorphism?</h2>
+        <p>Polymorphism's is a generic term that means 'many shapes'. More precisely Polymorphism's means the ability to request that the same operations be performed by a wide range of different types of things. In OOP the polymorphisms is achieved by using many different techniques named method overloading, operator overloading, and methods overriding. Mathod overloading is the ability to define several methods all with the same name.</p>
+        <h2>Inheritance</h2>
+        <p>Inheritance in java is a mechanism in which one object acquires all the properties and behaviours of a parent object. It is an importnat part of OOP's. The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can resuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also</p>
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>

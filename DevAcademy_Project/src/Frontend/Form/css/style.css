@@ -1,0 +1,104 @@
+html {
+  text-align: center;
+}
+
+body {
+  margin: 0px auto;
+  background-color: #ecf0f1;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="g"><feColorMatrix type="matrix" values="0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0 0 0 1 0"/></filter></svg>#g');
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+}
+
+.form-style {
+  z-index: 100;
+  position: relative;
+  max-width: 500px;
+  padding: 10px 10px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+fieldset {
+  border: none;
+}
+
+h1 {
+  color: #16a085;
+}
+
+.form-style legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.form-style label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style textarea,
+.form-style select
+ {
+  font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 90%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+
+.form-style input[type="text"]:focus,
+.form-style input[type="password"]:focus
+{
+    background: #d2d9dd;
+}
+
+.footer input[type="submit"],
+.footer input[type="button"] {
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+
+.footer input[type="submit"]:hover,
+.footer input[type="button"]:hover
+{
+	background: #109177;
+}

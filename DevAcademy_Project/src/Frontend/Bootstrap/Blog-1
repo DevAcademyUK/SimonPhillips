@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+
+    <style media="screen">
+      body {
+        color: white;
+      }
+
+      img {
+        border-radius: 10px 10px 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column bg-dark">
+      <div class="">
+        <img src="./img/HTML.png" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="jumbotron bg-dark">
+        <h1 class="display-4">HTML quiz</h1>
+        <p class="lead">This is the result of the HTML quiz I took.</p>
+        <hr class="my-4">
+        <p>At the end of the test there were a few things I had not seen before. Press the button to see the, detailed below.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+</html>
