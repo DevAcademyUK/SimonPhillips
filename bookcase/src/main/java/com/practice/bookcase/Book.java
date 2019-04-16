@@ -9,13 +9,11 @@ public class Book {
     private String bookYear;
     private String bookBlurb;
     private String coverUrL;
+
     InitialiseDB initDB = new InitialiseDB();
-
-
     public static ArrayList<Book> books = new ArrayList<>();
 
     public Book() {
-
     }
 
     public Book(int bookID, String bookTitle, String bookAuthor, String bookYear, String bookBlurb, String coverUrL) {
@@ -59,20 +57,6 @@ public class Book {
         this.bookYear = bookYear;
     }
 
-    public static void addNewBook(Book book) {
-        if (books.size() > 0) {
-            for (Book b : books) {
-                if (!books.contains(book)) {
-                    books.add(book);
-                    break;
-                } else
-                    System.out.println("That book is already in your library.");
-            }
-        } else {
-            books.add(book);
-        }
-    }
-
     public String getBookBlurb() {
         return bookBlurb;
     }
@@ -85,12 +69,24 @@ public class Book {
         return coverUrL;
     }
 
-    public void setCoverUrL(String coverUrL) {
-        this.coverUrL = coverUrL;
+    public void setCoverUrL(String coverURL) {
+        this.coverUrL = coverURL;
     }
 
     public ArrayList<Book> getAllBooks() {
         books = initDB.getBooks(initDB.getDBConnection());
         return books;
+    }
+
+    public void addNewBook(Book book) {
+        initDB.addNewBook(initDB.getDBConnection(), book);
+    }
+
+    public void updateBookRecord(Book book) {
+        initDB.updateBookRecord(initDB.getDBConnection(), book);
+    }
+
+    public void removeBook(Book book) {
+        initDB.removeBook(initDB.getDBConnection(), book);
     }
 }

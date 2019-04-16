@@ -21,7 +21,7 @@ public class InitialiseDB {
             SQLiteConfig config = new SQLiteConfig();
             config.enforceForeignKeys(true);
             con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "/Users/Simon01/bookcase/lib/BooksDatabase.db",
+                    "/Users/Simon01/IdeaProjects/bookcase/lib/BooksDatabase.db",
                     config.toProperties());
         } catch (Exception ex) {
             System.out.println(ex.getClass());
@@ -85,6 +85,85 @@ public class InitialiseDB {
                 }
             }
             return books;
+        }
+
+        public void addNewBook(Connection con, Book book) {
+            try {
+                String addBooks =
+                        "INSERT INTO tblBooks (book_title, book_author, book_released, book_blurb, book_cover) VALUES " +
+                        "(?,?,?,?,?)";
+                PreparedStatement pst = con.prepareStatement(addBooks);
+                pst.setString(1, book.getBookTitle());
+                pst.setString(2, book.getBookAuthor());
+                pst.setString(3, book.getBookYear());
+                pst.setString(4, book.getBookBlurb());
+                pst.setString(5, book.getCoverURL());
+
+                pst.executeUpdate();
+                pst.close();
+            } catch(Exception ex) {
+                System.out.println(ex.getClass());
+                ex.printStackTrace();
+            } finally {
+                try {
+                    con.close();
+                } catch(SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        public boolean updateBookRecord(Connection con, Book book) {
+            try {
+                String updateRecord = "UPDATE tblBooks SET book_title = ?, book_author = ?, book_released = ?," +
+                        "book_blurb = ?, book_cover = ?, WHERE book_id = ?";
+
+                PreparedStatement pst = con.prepareStatement(updateRecord);
+
+                pst.setString(1, book.getBookTitle());
+                pst.setString(2, book.getBookAuthor());
+                pst.setString(3, book.getBookYear());
+                pst.setString(4, book.getBookBlurb());
+                pst.setString(5, book.getCoverURL());
+                pst.setInt(6, book.getBookID());
+
+                pst.executeUpdate();
+                pst.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getClass());
+                ex.printStackTrace();
+                return false;
+            } finally {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            return true;
+        }
+
+        public boolean removeBook(Connection con, Book book) {
+            try {
+                String removeBook = "DELETE FROM tblbooks WHERE book_id = ?";
+                PreparedStatement pst = con.prepareStatement(removeBook);
+
+                pst.setInt(1, book.getBookID());
+                pst.executeUpdate();
+
+                pst.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getClass());
+                ex.printStackTrace();
+                return false;
+            } finally {
+                try {
+                    con.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            return true;
         }
     }
 

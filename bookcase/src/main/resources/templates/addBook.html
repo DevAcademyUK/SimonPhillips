@@ -17,6 +17,10 @@
             <input class="col-md-4 text-center" type="text" th:field="*{bookAuthor}" placeholder="Book Author e.g. Roald Dahl" />
             <p class="col-md-12 font-weight-bold mb-1 mt-1">Year Published</p>
             <input class="col-md-4 text-center" type="text" th:field="*{bookYear}" placeholder="Year Published e.g. 1994" />
+            <p class="col-md-12 font-weight-bold mb-1 mt-1">Book Blurb</p>
+            <textarea class="col-md-4 text-center" type="text" th:field="*{bookBlurb}" placeholder="Book Blurb e.g. Simon is the greatest" ></textarea>
+            <p class="col-md-12 font-weight-bold mb-1 mt-1">Book Cover Image URL</p>
+            <input class="col-md-4 text-center" th:field="*{coverURL}" placeholder="Cover Image URL e.g. http://www.amazon.co.uk">
             <br/>
             <input class="btn btn-danger mt-2 mr-2" type="reset" value="Reset"/>
             <input class="btn btn-primary mt-2 ml-2" type="submit" value="Submit"/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Edit Book Details - Bookcase</title>
@@ -17,6 +17,10 @@
             <input class="col-md-4 text-center" type="text" th:field="*{bookAuthor}" th:value="${book.bookAuthor}"/>
             <p class="col-md-12 font-weight-bold mb-1 mt-1">Year Published</p>
             <input class="col-md-4 text-center" type="text" th:field="*{bookYear}" th:value="${book.bookYear}"/>
+            <p class="col-md-12 font-weight-bold mb-1 mt-1">Book Blurb</p>
+            <textarea class="col-md-4 text-area" type="text" th:field="*{bookBlurb}" th:value="${book.bookBlurb}"/></textarea>
+            <p class="col-md-12 font-weight-bold mb-1 mt-1">Book Cover Image URL</p>
+            <input class="col-md-4 text-center" th:field="*{coverURL}" th:value="${book.coverURL}" />
             <br/>
             <a class="btn btn-danger mt-2 mr-2"href="/editDeleteBook">Cancel</a>
             <input class="bth bth-primary mt-2 ml-2"type="submit" value="Save"/>

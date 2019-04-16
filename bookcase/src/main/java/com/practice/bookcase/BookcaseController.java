@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+@SuppressWarnings("Duplicates")
 @Controller
 public class BookcaseController {
 
@@ -30,7 +32,7 @@ public class BookcaseController {
 
     @PostMapping("/bookAdded")
     public String bookAdded(@ModelAttribute Book book) {
-        Book.addNewBook(book);
+        book.addNewBook(book);
         return "index";
     }
 
@@ -56,6 +58,7 @@ public class BookcaseController {
     @PostMapping("/bookSaved")
     public String bookSaved(@ModelAttribute Book book) {
         for(Book b : Book.books){
+            book.updateBookRecord(book);
             if(b.getBookID() == book.getBookID()) {
                 int index = Book.books.indexOf(b);
                 Book.books.set(index, book);
@@ -79,13 +82,14 @@ public class BookcaseController {
 
     @PostMapping("/bookDeleted")
     public String bookDeleted(@ModelAttribute Book book) {
-        for(Book b : Book.books){
+        /*for(Book b : Book.books){
             if(b.getBookID() == book.getBookID())  {
                 int index = Book.books.indexOf(b);
                 Book.books.remove(index);
                 break;
             }
-        }
+        }*/
+        book.removeBook(book);
         return "/index";
     }
 }
